@@ -10,7 +10,6 @@ extends:
   parameters:
     package: fontconfig
     package_version: 2.13.91 
-    source_repository: public-conan-center
     destination_repository: ccdc-3rdparty-conan
     platforms:
       - centos7_gcc9
