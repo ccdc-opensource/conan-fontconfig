@@ -40,8 +40,6 @@ class FontconfigConan(ConanFile):
         self.requires("expat/2.2.10")
         if self.settings.os == "Linux":
             self.requires("libuuid/1.0.3")
-        elif self.settings.os == "Macos" and self.options.with_nls:
-            self.requires("libgettext/0.20.1")
 
     def build_requirements(self):
         self.build_requires("gperf/3.1")
