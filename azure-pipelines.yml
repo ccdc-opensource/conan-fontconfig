@@ -15,10 +15,3 @@ extends:
     destination_repository: ccdc-3rdparty-conan
     macos_brew_preinstall:
       - pkg-config
-    build_types:
-      - Release
-    platforms:
-      - centos7_gcc10
-      - ubuntu2004_gcc10
-      - macos11_xcode12
-      - macos12_xcode13
