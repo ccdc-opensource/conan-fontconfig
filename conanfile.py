@@ -76,7 +76,12 @@ class FontconfigConan(ConanFile):
         tools.replace_in_file(
             os.path.join(self._source_subfolder, 'Makefile.in'),
             '@ENABLE_CACHE_BUILD_FALSE@RUN_FC_CACHE_TEST = false',
-            'RUN_FC_CACHE_TEST=false'
+            'RUN_FC_CACHE_TEST = false'
+        )
+        tools.replace_in_file(
+            os.path.join(self._source_subfolder, 'Makefile.in'),
+            '@ENABLE_CACHE_BUILD_TRUE@RUN_FC_CACHE_TEST = test -z "$(DESTDIR)"',
+            ''
         )
 
 
