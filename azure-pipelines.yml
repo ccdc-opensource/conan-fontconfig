@@ -1,19 +1,19 @@
 resources:
   repositories:
     - repository: templates
-      type: git
-      name: ccdc-3rd-party/conan-azure-devops
+      type: github
+      endpoint: github
+      name: ccdc-opensource/conan-azure-devops
       ref: refs/heads/development
 
 extends:
   template: third-party-library-all-platforms-from-local-recipe.yml@templates
   parameters:
     package: fontconfig
-    package_version: 2.13.93
+    package_version: 2.14.2
     destination_repository: ccdc-3rdparty-conan
     platforms:
-      - centos7_gcc9
       - centos7_gcc10
       - ubuntu2004_gcc10
-      - macos1015_xcode11
-      - macos1015_xcode12
+      - macos11_xcode12
+      - macos12_xcode13
