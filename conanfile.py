@@ -36,14 +36,14 @@ class FontconfigConan(ConanFile):
         del self.settings.compiler.cppstd
 
     def requirements(self):
-        self.requires("freetype/2.10.4")
-        self.requires("expat/2.2.10")
+        self.requires("freetype/2.13.2")
+        self.requires("expat/2.6.0")
         if self.settings.os == "Linux":
             self.requires("libuuid/1.0.3")
 
     def build_requirements(self):
         self.build_requires("gperf/3.1")
-        self.build_requires("pkgconf/1.7.3")
+        self.build_requires("pkgconf/2.0.3")
         if tools.os_info.is_windows and not tools.get_env("CONAN_BASH_PATH"):
             self.build_requires("msys2/20200517")
 
